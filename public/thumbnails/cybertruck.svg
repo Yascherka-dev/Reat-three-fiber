@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="160" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="100" fill="url(#bg)"/>
+  <!-- Cybertruck silhouette - angular/trapezoidal shape -->
+  <polygon points="20,68 28,42 50,34 110,34 132,42 140,68" fill="#2a2a3a" stroke="#888" stroke-width="1"/>
+  <!-- Cab roof flat -->
+  <polygon points="40,34 52,22 108,22 120,34" fill="#333345" stroke="#aaa" stroke-width="0.8"/>
+  <!-- Windows -->
+  <polygon points="55,34 60,24 100,24 105,34" fill="#4a6fa5" opacity="0.8"/>
+  <!-- Wheels -->
+  <circle cx="48" cy="68" r="11" fill="#111" stroke="#555" stroke-width="1.5"/>
+  <circle cx="48" cy="68" r="6" fill="#222" stroke="#777" stroke-width="1"/>
+  <circle cx="112" cy="68" r="11" fill="#111" stroke="#555" stroke-width="1.5"/>
+  <circle cx="112" cy="68" r="6" fill="#222" stroke="#777" stroke-width="1"/>
+  <!-- Ground line -->
+  <line x1="10" y1="79" x2="150" y2="79" stroke="#444" stroke-width="0.5"/>
+  <!-- Label -->
+  <text x="80" y="93" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle" letter-spacing="1">CYBERTRUCK</text>
+</svg>

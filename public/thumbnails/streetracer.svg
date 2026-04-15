@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="160" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="100" fill="url(#bg)"/>
+  <!-- Street racer - long low coupe -->
+  <path d="M10,67 Q22,67 28,58 Q42,40 65,35 Q90,35 108,40 Q128,48 148,62 L148,67 Z" fill="#2a2a3a" stroke="#888" stroke-width="1"/>
+  <!-- Fastback roofline -->
+  <path d="M42,57 Q55,30 78,27 Q100,27 115,45" fill="#333345" stroke="#aaa" stroke-width="0.8"/>
+  <!-- Windshield -->
+  <path d="M52,56 Q62,33 78,29 Q95,29 110,47" fill="#4a6fa5" opacity="0.7"/>
+  <!-- Wheels -->
+  <circle cx="40" cy="67" r="12" fill="#111" stroke="#555" stroke-width="1.5"/>
+  <circle cx="40" cy="67" r="6" fill="#222" stroke="#777" stroke-width="1"/>
+  <circle cx="120" cy="67" r="12" fill="#111" stroke="#555" stroke-width="1.5"/>
+  <circle cx="120" cy="67" r="6" fill="#222" stroke="#777" stroke-width="1"/>
+  <line x1="10" y1="79" x2="150" y2="79" stroke="#444" stroke-width="0.5"/>
+  <text x="80" y="93" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle" letter-spacing="1">STREET RACER</text>
+</svg>
