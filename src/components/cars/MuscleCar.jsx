@@ -32,7 +32,7 @@ export function MuscleCar({ color, finish, shader, shaderParams }) {
 
   useEffect(() => {
     scene.traverse((child) => {
-      if (child.isMesh && child.material?.name === 'body_color_supra.001') {
+      if (child.isMesh && (child.name === 'Object_11' || child.material?.name === 'body_color_supra.001')) {
         bodyMeshRef.current = child
       }
     })

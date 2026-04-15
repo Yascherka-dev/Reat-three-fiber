@@ -24,7 +24,7 @@ function makeShaderMaterial(shader, params) {
   return mat
 }
 
-export function ConceptCar({ url, bodyMaterialName, rotation, position, color, finish, shader, shaderParams }) {
+export function ConceptCar({ url, bodyMaterialName, rotation, position, scale, color, finish, shader, shaderParams }) {
   const { scene } = useGLTF(url)
   const { roughness, metalness } = FINISH_PROPS[finish]
   const bodyMeshRef = useRef(null)
@@ -62,7 +62,7 @@ export function ConceptCar({ url, bodyMaterialName, rotation, position, color, f
   })
 
   return (
-    <group dispose={null} rotation={rotation} position={position}>
+    <group dispose={null} rotation={rotation} position={position} scale={scale ?? 1}>
       <primitive object={scene} />
     </group>
   )

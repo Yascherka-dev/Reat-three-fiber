@@ -122,6 +122,7 @@ export function CarLoader() {
             bodyMaterialName={carConfig.bodyMesh}
             position={carConfig.position ?? [0, 1.18, 0]}
             rotation={carConfig.rotation ?? [0, 0, 0]}
+            scale={carConfig.scale ?? 1}
             color={color}
             finish={finish}
             shader={shader}
