@@ -1,0 +1,62 @@
+import { CARS } from '../../config/cars.config.js'
+import { useConfiguratorStore } from '../../store/useConfiguratorStore.js'
+import styles from './ColorPanel.module.css'
+
+const FINISHES = ['matte', 'glossy', 'metallic']
+
+export function ColorPanel({ cameraResetRef }) {
+  const activeCar = useConfiguratorStore((s) => s.activeCar)
+  const color = useConfiguratorStore((s) => s.color)
+  const finish = useConfiguratorStore((s) => s.finish)
+  const setColor = useConfiguratorStore((s) => s.setColor)
+  const setFinish = useConfiguratorStore((s) => s.setFinish)
+
+  const carConfig = CARS.find((c) => c.id === activeCar)
+
+  return (
+    <div className={styles.panel}>
+      <div className={styles.title}>{carConfig?.label ?? activeCar}</div>
+
+      <div>
+        <div className={styles.label}>Color</div>
+        <div className={styles.swatches}>
+          {carConfig?.colors.map((c) => (
+            <button
+              key={c}
+              className={`${styles.swatch} ${color === c ? styles.active : ''}`}
+              style={{ background: c }}
+              onClick={() => setColor(c)}
+              title={c}
+            />
+          ))}
+        </div>
+        <input
+          type="color"
+          className={styles.customColor}
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+          title="Custom color"
+        />
+      </div>
+
+      <div>
+        <div className={styles.label}>Finish</div>
+        <div className={styles.finishBtns}>
+          {FINISHES.map((f) => (
+            <button
+              key={f}
+              className={`${styles.finishBtn} ${finish === f ? styles.active : ''}`}
+              onClick={() => setFinish(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <button className={styles.resetBtn} onClick={() => cameraResetRef?.current?.()}>
+        Reset Camera
+      </button>
+    </div>
+  )
+}
