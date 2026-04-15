@@ -40,6 +40,7 @@ export const CARS = [
     colors: ['#ffffff', '#111111', '#c0392b', '#2980b9', '#f39c12'],
     position: [0, 1.18, 0],
     rotation: [0, 0, 0],
+    scale: 10,
   },
   {
     id: 'scifi029',
@@ -48,8 +49,8 @@ export const CARS = [
     bodyMesh: 'silver',
     thumbnail: '/thumbnails/scifi029.svg',
     colors: ['#ffffff', '#c0c0c0', '#2980b9', '#111111', '#e74c3c'],
-    position: [0, 1.18, 0],
-    rotation: [-Math.PI / 2, 0, 0],
+    position: [0, 1.18, 1.9],
+    rotation: [0, 0, 0],
   },
   {
     id: 'gtsupra',
@@ -58,7 +59,7 @@ export const CARS = [
     bodyMesh: 'body_color_supra.001',
     thumbnail: '/thumbnails/gtsupra.svg',
     colors: ['#ffffff', '#111111', '#c0392b', '#f39c12', '#27ae60'],
-    position: [0, 1.162, 0],
+     position: [0, 1.18, 1.9],
     rotation: [0, 0, 0],
   },
 ]
