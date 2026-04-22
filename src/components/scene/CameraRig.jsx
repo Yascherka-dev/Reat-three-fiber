@@ -13,7 +13,6 @@ export function CameraRig({ resetRef, started }) {
 
   useEffect(() => {
     if (!started) return
-    camera.position.set(6, 18, 28)
     controls.current?.target.set(0, 0, 0)
     if (controls.current) controls.current.enabled = false
 

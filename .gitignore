@@ -4,3 +4,15 @@ dist/
 *.local
 .env
 .env.*
+
+# AI tools
+.claude/
+.cursor/
+.copilot/
+.aider*
+.continue/
+.codeium/
+.superpowers/
+*.cursorrules
+.windsurfrules
+docs/

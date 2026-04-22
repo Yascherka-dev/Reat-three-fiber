@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
       <Canvas
-        camera={{ position: [0, 3, 9], fov: 42 }}
+        camera={{ position: [6, 18, 28], fov: 42 }}
         gl={{ antialias: true }}
         style={{ background: '#0a0a0f' }}
       >
@@ -22,6 +22,15 @@ export default function App() {
           <Bloom luminanceThreshold={1} intensity={1.42} radius={0.72} mipmapBlur />
         </EffectComposer>
       </Canvas>
+      <div style={{
+        position: 'fixed',
+        inset: 0,
+        background: '#07070c',
+        zIndex: 200,
+        opacity: started ? 0 : 1,
+        transition: 'opacity 1.4s ease 0.2s',
+        pointerEvents: 'none',
+      }} />
       <Leva hidden={!started} />
       {started && <Overlay cameraActionsRef={cameraActionsRef} />}
       <SplashScreen onEnter={() => setStarted(true)} />

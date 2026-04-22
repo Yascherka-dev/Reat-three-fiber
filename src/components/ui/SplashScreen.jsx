@@ -7,10 +7,8 @@ export function SplashScreen({ onEnter }) {
 
   function handleEnter() {
     setLeaving(true)
-    setTimeout(() => {
-      setVisible(false)
-      onEnter()
-    }, 800)
+    onEnter()
+    setTimeout(() => setVisible(false), 1000)
   }
 
   if (!visible) return null
