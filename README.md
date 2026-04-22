@@ -1,50 +1,62 @@
 # Car Configurator — React Three Fiber
 
-Interactive 3D car configurator built with React Three Fiber. Cinematic intro, real-time customization, 7 models.
+Configurateur 3D interactif construit avec React Three Fiber. Intro cinématique, personnalisation en temps réel, 7 modèles.
+
+> Interactive 3D car configurator built with React Three Fiber. Cinematic intro, real-time customization, 7 models.
+
+---
 
 ## Stack
 
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) — React renderer for Three.js
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) — rendu React pour Three.js
 - [@react-three/drei](https://github.com/pmndrs/drei) — OrbitControls, Environment, useGLTF, useProgress…
 - [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing) — Bloom
-- [Zustand](https://github.com/pmndrs/zustand) — global state
-- [GSAP](https://gsap.com/) — camera & car animations
-- [Leva](https://github.com/pmndrs/leva) — shader parameter tweaks
-- [react-colorful](https://github.com/omgovich/react-colorful) — custom color picker
-- [Vite](https://vitejs.dev/) — build tool
+- [Zustand](https://github.com/pmndrs/zustand) — état global
+- [GSAP](https://gsap.com/) — animations caméra & voitures
+- [Leva](https://github.com/pmndrs/leva) — contrôles shaders en direct
+- [react-colorful](https://github.com/omgovich/react-colorful) — color picker personnalisé
+- [Vite](https://vitejs.dev/) — outil de build
 
-## Getting started
+---
+
+## Lancer le projet / Getting started
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+Ouvrir / Open [http://localhost:5173](http://localhost:5173)
 
-## Features
+---
 
-- **Splash screen** — cinematic entry with fade + camera travel from above
-- **7 cars** — each with live color, finish (matte / glossy / metallic) and custom shaders
-- **Shaders** — disks, stripes, hologram, wave with live Leva controls
-- **Camera presets** — Front / Side / Top / Reset with smooth GSAP transitions
-- **Auto-rotate** — orbit auto-rotation kicks in after 3s idle
-- **Car specs** — power, top speed, 0–100 per model
-- **Loading screen** — progress bar while assets load
-- **Responsive** — mobile drawer layout
+## Fonctionnalités / Features
 
-## Project structure
+| FR | EN |
+|----|----|
+| Écran d'accueil cinématique avec fondu et voyage caméra | Cinematic splash screen with fade + camera travel |
+| 7 voitures avec couleur, finition et shader en temps réel | 7 cars with live color, finish and shader |
+| Shaders : disques, rayures, hologramme, vague (Leva) | Shaders: disks, stripes, hologram, wave (Leva) |
+| Présets caméra : Face / Côté / Dessus / Reset | Camera presets: Front / Side / Top / Reset |
+| Auto-rotation après 3s d'inactivité | Auto-rotate after 3s idle |
+| Fiche technique par modèle | Car specs per model |
+| Écran de chargement avec barre de progression | Loading screen with progress bar |
+| Layout responsive mobile | Responsive mobile layout |
+
+---
+
+## Structure du projet / Project structure
 
 ```
 src/
 ├── components/
-│   ├── cars/        # Car components + CarLoader
+│   ├── cars/        # Composants voitures + CarLoader
 │   ├── scene/       # Experience, Garage, CameraRig
 │   └── ui/          # Overlay, SplashScreen, ColorPanel, CarSpecs, LoadingScreen
-├── config/          # Car list + finish/shader config
-├── shaders/         # GLSL shaders + materials
-└── store/           # Zustand store
+├── config/          # Liste des voitures, finitions, shaders
+├── shaders/         # Shaders GLSL + matériaux
+└── store/           # Store Zustand
 public/
-├── models/          # GLB car models
-└── thumbnails/      # Car picker thumbnails
+├── models/          # Modèles GLB
+└── thumbnails/      # Vignettes du sélecteur
 ```
