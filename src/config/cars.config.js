@@ -21,7 +21,7 @@ export const CARS = [
     file: '/models/conceptcar040.glb',
     bodyMesh: 'Object_13',
     thumbnail: '/thumbnails/conceptcar040.svg',
-    colors: ['#bdc3c7', '#2c3e50', '#1a5276', '#784212', '#1e8449'],
+    colors: ['#ffffff', '#bdc3c7', '#2c3e50', '#1a5276', '#784212', '#1e8449'],
   },
   {
     id: 'conceptcar033',
@@ -29,7 +29,7 @@ export const CARS = [
     file: '/models/conceptcar033.glb',
     bodyMesh: 'Object_11',
     thumbnail: '/thumbnails/conceptcar033.svg',
-    colors: ['#c0392b', '#111111', '#f39c12', '#ffffff', '#6c3483'],
+    colors: ['#ffffff', '#c0392b', '#111111', '#f39c12', '#6c3483'],
   },
   {
     id: 'streetracer',
