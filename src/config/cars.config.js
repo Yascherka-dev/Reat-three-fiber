@@ -6,6 +6,7 @@ export const CARS = [
     bodyMesh: 'interior001_6',
     thumbnail: '/thumbnails/cybertruck.svg',
     colors: ['#ffffff', '#111111', '#c0392b', '#2980b9', '#f39c12', '#27ae60'],
+    specs: { type: 'Electric Pickup', power: '845 hp', top: '210 km/h', '0-100': '2.9 s' },
   },
   {
     id: 'conceptcar002',
@@ -14,6 +15,7 @@ export const CARS = [
     bodyMesh: 'future_car_002_by_unityfan_carpaint_0',
     thumbnail: '/thumbnails/conceptcar002.svg',
     colors: ['#ffffff', '#111111', '#e74c3c', '#3498db', '#e67e22'],
+    specs: { type: 'Concept GT', power: '1 200 hp', top: '380 km/h', '0-100': '1.8 s' },
   },
   {
     id: 'conceptcar040',
@@ -22,6 +24,7 @@ export const CARS = [
     bodyMesh: 'Object_13',
     thumbnail: '/thumbnails/conceptcar040.svg',
     colors: ['#ffffff', '#bdc3c7', '#2c3e50', '#1a5276', '#784212', '#1e8449'],
+    specs: { type: 'Concept SUV', power: '680 hp', top: '260 km/h', '0-100': '3.4 s' },
   },
   {
     id: 'conceptcar033',
@@ -30,6 +33,7 @@ export const CARS = [
     bodyMesh: 'Object_11',
     thumbnail: '/thumbnails/conceptcar033.svg',
     colors: ['#ffffff', '#c0392b', '#111111', '#f39c12', '#6c3483'],
+    specs: { type: 'Muscle Concept', power: '920 hp', top: '340 km/h', '0-100': '2.4 s' },
   },
   {
     id: 'streetracer',
@@ -41,6 +45,7 @@ export const CARS = [
     position: [0, 1.18, 0],
     rotation: [0, 0, 0],
     scale: 10,
+    specs: { type: 'Street Racer', power: '550 hp', top: '295 km/h', '0-100': '3.1 s' },
   },
   {
     id: 'scifi029',
@@ -51,6 +56,7 @@ export const CARS = [
     colors: ['#ffffff', '#c0c0c0', '#2980b9', '#111111', '#e74c3c'],
     position: [0, 1.18, 1.9],
     rotation: [0, 0, 0],
+    specs: { type: 'Sci-Fi Cruiser', power: '1 800 hp', top: '500 km/h', '0-100': '1.2 s' },
   },
   {
     id: 'gtsupra',
@@ -59,8 +65,9 @@ export const CARS = [
     bodyMesh: 'body_color_supra.001',
     thumbnail: '/thumbnails/gtsupra.svg',
     colors: ['#ffffff', '#111111', '#c0392b', '#f39c12', '#27ae60'],
-     position: [0, 1.18, 1.9],
+    position: [0, 1.18, 1.9],
     rotation: [0, 0, 0],
+    specs: { type: 'Sports Coupe', power: '480 hp', top: '285 km/h', '0-100': '3.8 s' },
   },
 ]
 
