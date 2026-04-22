@@ -5,13 +5,14 @@ import gsap from 'gsap'
 
 const IDLE_DELAY = 3000
 
-export function CameraRig({ resetRef }) {
+export function CameraRig({ resetRef, started }) {
   const controls = useRef()
   const { camera } = useThree()
   const [autoRotate, setAutoRotate] = useState(false)
   const idleTimer = useRef(null)
 
   useEffect(() => {
+    if (!started) return
     camera.position.set(6, 18, 28)
     controls.current?.target.set(0, 0, 0)
     if (controls.current) controls.current.enabled = false
@@ -26,7 +27,7 @@ export function CameraRig({ resetRef }) {
         resetIdleTimer()
       },
     })
-  }, [camera])
+  }, [started])
 
   function resetIdleTimer() {
     setAutoRotate(false)

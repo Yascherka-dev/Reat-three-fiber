@@ -17,7 +17,7 @@ export default function App() {
         gl={{ antialias: true }}
         style={{ background: '#0a0a0f' }}
       >
-        <Experience cameraResetRef={cameraActionsRef} />
+        <Experience cameraResetRef={cameraActionsRef} started={started} />
         <EffectComposer>
           <Bloom luminanceThreshold={1} intensity={1.42} radius={0.72} mipmapBlur />
         </EffectComposer>

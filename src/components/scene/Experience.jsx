@@ -6,7 +6,7 @@ import { Garage } from './Garage.jsx'
 import { CameraRig } from './CameraRig.jsx'
 import { CarLoader } from '../cars/CarLoader.jsx'
 
-export function Experience({ cameraResetRef }) {
+export function Experience({ cameraResetRef, started }) {
   const podiumRef = useRef()
   const carGroupRef = useRef()
 
@@ -24,7 +24,7 @@ export function Experience({ cameraResetRef }) {
 
   return (
     <>
-      <CameraRig resetRef={cameraResetRef} />
+      <CameraRig resetRef={cameraResetRef} started={started} />
       <Garage podiumRef={podiumRef} />
       <CarLoader />
     </>
