@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import * as THREE from 'three'
 import { useConfiguratorStore } from '../../store/useConfiguratorStore.js'
+import { Particles } from './Particles.jsx'
 
 const shiningWhite = new THREE.Color(1.1, 1.1, 1.1)
 const shiningBlue = new THREE.Color(0.1, 0.5, 4.8)
@@ -82,6 +83,8 @@ export function Garage({ podiumRef }) {
       )}
       {environment === 'studio' && <Environment preset="studio" />}
       {environment === 'city'   && <Environment preset="city" />}
+
+      <Particles />
     </>
   )
 }
