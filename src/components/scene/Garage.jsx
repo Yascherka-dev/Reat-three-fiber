@@ -2,7 +2,6 @@ import { ContactShadows, Environment, Lightformer, MeshReflectorMaterial } from 
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import * as THREE from 'three'
-import { Particles } from './Particles.jsx'
 
 const shiningWhite = new THREE.Color(1.1, 1.1, 1.1)
 const shiningBlue = new THREE.Color(0.1, 0.5, 4.8)
@@ -78,7 +77,6 @@ export function Garage({ podiumRef }) {
         <Lightformer form="ring" color="#ff4444" intensity={1.5} scale={2} position={[10, 5, 10]} onUpdate={(self) => self.lookAt(0, 0, 0)} />
       </Environment>
 
-      <Particles />
     </>
   )
 }
