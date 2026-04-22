@@ -1,5 +1,6 @@
 import { CARS } from '../../config/cars.config.js'
 import { useConfiguratorStore } from '../../store/useConfiguratorStore.js'
+import { CustomColorPicker } from './CustomColorPicker.jsx'
 import styles from './ColorPanel.module.css'
 
 const FINISHES = ['matte', 'glossy', 'metallic']
@@ -40,13 +41,7 @@ export function ColorPanel({ cameraActionsRef }) {
             />
           ))}
         </div>
-        <input
-          type="color"
-          className={styles.customColor}
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-          title="Custom color"
-        />
+        <CustomColorPicker color={color} onChange={setColor} />
       </div>
 
       <div>

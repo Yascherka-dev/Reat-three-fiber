@@ -1,0 +1,107 @@
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 200ms ease;
+}
+
+.trigger:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.hex {
+  flex: 1;
+  font-size: 11px;
+  font-family: monospace;
+  color: #e0e0e0;
+  text-align: left;
+  letter-spacing: 0.08em;
+}
+
+.arrow {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.popup {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  z-index: 200;
+  background: rgba(15, 15, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Override react-colorful styles */
+.popup :global(.react-colorful) {
+  width: 180px;
+  height: 160px;
+}
+
+.popup :global(.react-colorful__saturation) {
+  border-radius: 6px 6px 0 0;
+}
+
+.popup :global(.react-colorful__hue) {
+  height: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.popup :global(.react-colorful__pointer) {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.hash {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: monospace;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 11px;
+  font-family: monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 100%;
+}
