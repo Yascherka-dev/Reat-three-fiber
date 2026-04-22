@@ -2,14 +2,12 @@ import { ContactShadows, Environment, Lightformer, MeshReflectorMaterial } from 
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import * as THREE from 'three'
-import { useConfiguratorStore } from '../../store/useConfiguratorStore.js'
 import { Particles } from './Particles.jsx'
 
 const shiningWhite = new THREE.Color(1.1, 1.1, 1.1)
 const shiningBlue = new THREE.Color(0.1, 0.5, 4.8)
 
 export function Garage({ podiumRef }) {
-  const environment = useConfiguratorStore((s) => s.environment)
   const square = useRef()
   const triangle = useRef()
 
@@ -71,18 +69,14 @@ export function Garage({ podiumRef }) {
         <meshStandardMaterial color={shiningWhite} roughness={0.75} toneMapped={false} />
       </mesh>
 
-      {environment === 'garage' && (
-        <Environment resolution={512}>
-          {[-9, -6, -3, 0, 3, 6, 9].map((z) => (
-            <Lightformer key={z} intensity={2} rotation-x={Math.PI / 2} position={[0, 4, z]} scale={[10, 1, 1]} />
-          ))}
-          <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-50, 2, 0]} scale={[100, 2, 1]} />
-          <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[50, 2, 0]} scale={[100, 2, 1]} />
-          <Lightformer form="ring" color="#ff4444" intensity={1.5} scale={2} position={[10, 5, 10]} onUpdate={(self) => self.lookAt(0, 0, 0)} />
-        </Environment>
-      )}
-      {environment === 'studio' && <Environment preset="studio" />}
-      {environment === 'city'   && <Environment preset="city" />}
+      <Environment resolution={512}>
+        {[-9, -6, -3, 0, 3, 6, 9].map((z) => (
+          <Lightformer key={z} intensity={2} rotation-x={Math.PI / 2} position={[0, 4, z]} scale={[10, 1, 1]} />
+        ))}
+        <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-50, 2, 0]} scale={[100, 2, 1]} />
+        <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[50, 2, 0]} scale={[100, 2, 1]} />
+        <Lightformer form="ring" color="#ff4444" intensity={1.5} scale={2} position={[10, 5, 10]} onUpdate={(self) => self.lookAt(0, 0, 0)} />
+      </Environment>
 
       <Particles />
     </>

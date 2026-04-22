@@ -12,7 +12,4 @@ export const useConfiguratorStore = create((set) => ({
 
   shader: 'none',
   setShader: (shader) => set({ shader }),
-
-  environment: 'garage',
-  setEnvironment: (environment) => set({ environment }),
 }))
