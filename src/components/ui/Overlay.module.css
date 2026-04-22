@@ -8,3 +8,34 @@
 .overlay > * {
   pointer-events: auto;
 }
+
+/* Bouton flottant mobile uniquement */
+.drawerToggle {
+  display: none;
+  position: fixed;
+  bottom: 140px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #4fc3f7;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms;
+}
+
+.drawerToggle:hover {
+  background: rgba(79, 195, 247, 0.15);
+}
+
+@media (max-width: 768px) {
+  .drawerToggle {
+    display: flex;
+  }
+}

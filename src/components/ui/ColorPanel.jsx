@@ -12,7 +12,7 @@ const CAMERA_PRESETS = [
   { label: 'Reset', key: 'reset' },
 ]
 
-export function ColorPanel({ cameraActionsRef }) {
+export function ColorPanel({ cameraActionsRef, drawerOpen }) {
   const activeCar = useConfiguratorStore((s) => s.activeCar)
   const color = useConfiguratorStore((s) => s.color)
   const finish = useConfiguratorStore((s) => s.finish)
@@ -22,7 +22,7 @@ export function ColorPanel({ cameraActionsRef }) {
   const carConfig = CARS.find((c) => c.id === activeCar)
 
   return (
-    <div className={styles.panel}>
+    <div className={`${styles.panel} ${drawerOpen ? styles.drawerOpen : ''}`}>
       <div className={styles.title}>{carConfig?.label ?? activeCar}</div>
 
       <div>

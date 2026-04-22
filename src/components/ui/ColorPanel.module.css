@@ -3,6 +3,7 @@
   top: 50%;
   left: 24px;
   transform: translateY(-50%);
+  z-index: 30;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -99,4 +100,29 @@
 .resetBtn:hover {
   border-color: rgba(255, 255, 255, 0.3);
   color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    border-radius: 20px 20px 0 0;
+    min-width: unset;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+    transition: transform 350ms cubic-bezier(0.32, 0.72, 0, 1);
+    padding-bottom: 32px;
+  }
+
+  .panel.drawerOpen {
+    transform: translateY(0);
+  }
+
+  .finishBtns {
+    flex-wrap: wrap;
+  }
 }

@@ -8,6 +8,23 @@
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
+  max-width: calc(100vw - 32px);
+}
+
+@media (max-width: 768px) {
+  .specs {
+    bottom: 110px;
+    gap: 4px;
+  }
+
+  .stat {
+    padding: 6px 10px;
+    min-width: 60px;
+  }
+
+  .value {
+    font-size: 11px;
+  }
 }
 
 .stat {
