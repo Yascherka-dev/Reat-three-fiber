@@ -3,6 +3,7 @@ import { useConfiguratorStore } from '../../store/useConfiguratorStore.js'
 import styles from './ColorPanel.module.css'
 
 const FINISHES = ['matte', 'glossy', 'metallic']
+const ENVIRONMENTS = ['garage', 'studio', 'city']
 
 const CAMERA_PRESETS = [
   { label: 'Front', key: 'front' },
@@ -17,6 +18,8 @@ export function ColorPanel({ cameraActionsRef }) {
   const finish = useConfiguratorStore((s) => s.finish)
   const setColor = useConfiguratorStore((s) => s.setColor)
   const setFinish = useConfiguratorStore((s) => s.setFinish)
+  const environment = useConfiguratorStore((s) => s.environment)
+  const setEnvironment = useConfiguratorStore((s) => s.setEnvironment)
 
   const carConfig = CARS.find((c) => c.id === activeCar)
 
@@ -56,6 +59,21 @@ export function ColorPanel({ cameraActionsRef }) {
               onClick={() => setFinish(f)}
             >
               {f}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className={styles.label}>Environment</div>
+        <div className={styles.finishBtns}>
+          {ENVIRONMENTS.map((e) => (
+            <button
+              key={e}
+              className={`${styles.finishBtn} ${environment === e ? styles.active : ''}`}
+              onClick={() => setEnvironment(e)}
+            >
+              {e}
             </button>
           ))}
         </div>
