@@ -46,11 +46,24 @@ export function CameraRig({ resetRef }) {
     }
   }, [])
 
+  function moveTo(x, y, z) {
+    if (controls.current) controls.current.enabled = false
+    gsap.to(camera.position, {
+      x, y, z,
+      duration: 1.4,
+      ease: 'power2.inOut',
+      onUpdate: () => controls.current?.update(),
+      onComplete: () => { if (controls.current) controls.current.enabled = true },
+    })
+    resetIdleTimer()
+  }
+
   if (resetRef) {
-    resetRef.current = () => {
-      camera.position.set(0, 3, 9)
-      controls.current?.target.set(0, 0, 0)
-      controls.current?.update()
+    resetRef.current = {
+      reset: () => moveTo(0, 3, 9),
+      front: () => moveTo(0, 2, 10),
+      side:  () => moveTo(10, 2, 0),
+      top:   () => moveTo(0, 14, 0.1),
     }
   }
 

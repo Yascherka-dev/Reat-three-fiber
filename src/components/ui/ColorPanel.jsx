@@ -4,7 +4,14 @@ import styles from './ColorPanel.module.css'
 
 const FINISHES = ['matte', 'glossy', 'metallic']
 
-export function ColorPanel({ cameraResetRef }) {
+const CAMERA_PRESETS = [
+  { label: 'Front', key: 'front' },
+  { label: 'Side',  key: 'side' },
+  { label: 'Top',   key: 'top' },
+  { label: 'Reset', key: 'reset' },
+]
+
+export function ColorPanel({ cameraActionsRef }) {
   const activeCar = useConfiguratorStore((s) => s.activeCar)
   const color = useConfiguratorStore((s) => s.color)
   const finish = useConfiguratorStore((s) => s.finish)
@@ -54,9 +61,20 @@ export function ColorPanel({ cameraResetRef }) {
         </div>
       </div>
 
-      <button className={styles.resetBtn} onClick={() => cameraResetRef?.current?.()}>
-        Reset Camera
-      </button>
+      <div>
+        <div className={styles.label}>Camera</div>
+        <div className={styles.finishBtns}>
+          {CAMERA_PRESETS.map(({ label, key }) => (
+            <button
+              key={key}
+              className={styles.finishBtn}
+              onClick={() => cameraActionsRef?.current?.[key]?.()}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

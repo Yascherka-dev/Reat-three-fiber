@@ -5,7 +5,7 @@ import { Experience } from './components/scene/Experience.jsx'
 import { Overlay } from './components/ui/Overlay.jsx'
 
 export default function App() {
-  const cameraResetRef = useRef()
+  const cameraActionsRef = useRef()
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
@@ -20,12 +20,12 @@ export default function App() {
         gl={{ antialias: true }}
         style={{ background: '#0a0a0f' }}
       >
-        <Experience cameraResetRef={cameraResetRef} />
+        <Experience cameraResetRef={cameraActionsRef} />
         <EffectComposer>
           <Bloom luminanceThreshold={1} intensity={1.42} radius={0.72} mipmapBlur />
         </EffectComposer>
       </Canvas>
-      <Overlay cameraResetRef={cameraResetRef} />
+      <Overlay cameraActionsRef={cameraActionsRef} />
       <div style={{
         position: 'fixed', inset: 0, background: '#000',
         opacity: fadeOut ? 0 : 1,
