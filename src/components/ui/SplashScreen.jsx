@@ -19,7 +19,6 @@ export function SplashScreen({ onEnter }) {
 
       <div className={styles.topBar}>
         <span className={styles.tag}>R3F × THREE.JS</span>
-        <span className={styles.blink}>● LIVE</span>
       </div>
 
       <div className={styles.center}>
